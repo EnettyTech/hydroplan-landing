@@ -1,0 +1,14 @@
+services:
+
+  hydroplan-landing:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BUILDKIT_INLINE_CACHE: 1
+    ports:
+      - "8050:8050"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+#
